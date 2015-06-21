@@ -1,0 +1,11 @@
+---
+layout: default
+---
+{% for post in site.posts limit:5 %}  
+  <h1>
+    <span>{{ post.date | date_to_string }}</span> &raquo;  
+    <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+  </h1>  
+  {{ post.content}}
+  <hr>
+{% endfor %}  
